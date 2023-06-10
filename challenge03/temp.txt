@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Roboto-black;
+    / for performance reasons*/
+    font-display: swap;
+    /* this way we make all weights available */
+    font-weight: 100 900;
+    src: url('font/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: Roboto-medium;
+    /* for performance reasons*/
+    font-display: swap;
+    /* this way we make all weights available */
+    font-weight: 100 900;
+    src: url('font/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: Roboto;
+    /* for performance reasons*/
+    font-display: swap;
+    /* this way we make all weights available */
+    font-weight: 100 900;
+    src: url('font/Roboto-Regular.ttf');
+}
