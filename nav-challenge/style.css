@@ -95,6 +95,10 @@ header {
     display: flex;
 }
 
+.nav__list--primary {
+    margin: 0 auto;
+}
+
 .nav__item {
     padding: 0.5rem;
 }
@@ -103,7 +107,7 @@ header {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .nav__link--button {
