@@ -8,7 +8,9 @@
    2. Add a space between all the items
 */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -34,7 +36,7 @@ h1 {
 .btn {
     display: inline-block;
     text-decoration: none;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     color: #23424A;
     font-weight: 900;
     background-color: #38CFD9;
@@ -44,7 +46,7 @@ h1 {
 
 .btn:hover,
 .btn:focus {
-    opacity: .75; 
+    opacity: .75;
 }
 
 .container {
@@ -63,14 +65,27 @@ h1 {
     width: 100%;
 }
 
-.col + .col {
+.col+.col {
     margin-left: 30px;
 }
-
 
 header {
     background: #136c72;
     padding: .5em 0;
+}
+
+.flex-ai-center {
+    align-items: center;
+}
+
+.logo {
+    margin-right: 1em;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .nav__list {
@@ -96,6 +111,7 @@ header {
     color: #136c72;
     padding: .25em 1em;
     border-radius: 10em;
+    margin: 0;
 }
 
 .nav__link:hover {
@@ -109,7 +125,7 @@ header {
     color: #FFF;
 }
 
-.hero__text { 
+.hero__text {
     width: 62%;
 }
 
