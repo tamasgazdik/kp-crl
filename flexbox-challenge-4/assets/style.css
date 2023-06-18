@@ -1,0 +1,136 @@
+/* =================================================================
+    global resets and styles
+  ================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+html {
+    /* min-height: 100vh;
+    min-height: 100dvh; */
+    font-size: 62.5%;
+    color: var(--dark);
+}
+
+img {
+    display: block;
+    width: 100%;
+    transform: scale(1.05) translate(0, 10px);
+}
+
+:root {
+    --beige: #F3EED9;
+    --dark: #222C2A;
+    --brown: #824936;
+    --white: #FFFFFF;
+
+    --ff-roboto: 'Roboto', sans-serif;
+    --ff-playfair: 'Playfair Display', serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    /* design specification */
+    max-width: 1128px;
+}
+
+/* =================================================================
+    header styles
+  ================================================================= */
+header {
+    background-color: var(--beige);
+    text-align: center;
+    /* design specification */
+    min-height: 660px;
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    /* to match design */
+    max-width: 800px;
+}
+
+.hero__p {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-family: var(--ff-roboto);
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.hero__header {
+    font-family: var(--ff-playfair);
+    font-size: 6rem;
+    color: var(--brown);
+}
+
+/* =================================================================
+    main styles
+  ================================================================= */
+.section {
+    padding-block: 10rem;
+}
+
+.section--bg-brown {
+    background-color: var(--brown);
+}
+
+.section--bg-dark {
+    background-color: var(--dark);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section__p {
+    font-family: var(--ff-roboto);
+    font-size: 2.1rem;
+    font-weight: 400;
+}
+
+.section__header {
+    font-family: var(--ff-playfair);
+    font-size: 3.6rem;
+    color: var(--brown);
+    margin: 0 auto;
+    padding-bottom: 1em;
+}
+
+.section__header--center {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.section__header--light {
+    color: var(--beige);
+}
+
+.flex-item-50 {
+    flex-basis: 50%;
+}
+
+.flex-item-50 + .flex-item-50 {
+    margin: 0 5rem;
+}
+
+.section__p--light {
+    color: var(--white);
+}
+
+.img-container {
+    overflow: hidden;
+}
