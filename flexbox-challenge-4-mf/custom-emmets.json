@@ -1,0 +1,7 @@
+{
+    "css": {
+        "snippets": {
+            "resets": "*,\n*::after,\n*::before {\nbox-sizing: border-box;\n}\n\n* {\nmargin: 0;\npadding: 0;\nfont: inherit;\n}\n\nhtml {\n/* min-height: 100vh;\nmin-height: 100dvh; */\nfont-size: 62.5%;\ncolor: var(--dark);\n}\n\nimg {\ndisplay: block;\nwidth: 100%;\ntransform: scale(1.05) translate(0, 10px);\n}"
+        }
+    }
+}
