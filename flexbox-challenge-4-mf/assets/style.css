@@ -16,4 +16,92 @@
 
 html {
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --beige: #F3EED9;
+    --brown: #824936;
+    --dark: #222C2A;
+    --white: #FFF;
+}
+
+.container {
+    /* from specifications */
+    width: 85%;
+    max-width: 1128px;
+    margin: 0 auto;
+    padding: 2.5rem;
+}
+
+h1, h2 {
+    text-wrap: balance;
+}
+
+/* ========================================================
+    hero section styles
+   ======================================================== */
+.hero {
+    background-color: var(--beige);
+    /* from specifications */
+    min-height: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero__text {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+.hero__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 6rem;
+    color: var(--brown);
+}
+
+/* ========================================================
+    quality designs section styles
+   ======================================================== */
+.section__title {
+    border: 2px solid red;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.6rem;
+    color: var(--beige);
+    padding-bottom: 1em;
+}
+
+/* modifier class */
+.section__title--brown-center {
+    color: var(--brown);
+    text-align: center;
+}
+
+.column {
+    margin-top: 1em;
+    font-size: 2.1rem;
+}
+
+/* ========================================================
+    made custom section styles
+   ======================================================== */
+.made-custom-section {
+    background-color: var(--dark);
+}
+
+.section__text-white {
+    color: var(--white);
+}
+
+/* ========================================================
+    media queries
+   ======================================================== */
