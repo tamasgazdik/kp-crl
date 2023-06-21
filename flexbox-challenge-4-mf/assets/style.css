@@ -32,7 +32,7 @@ img {
 
 .container {
     /* from specifications */
-    width: 85%;
+    width: 90%;
     max-width: 1128px;
     margin: 0 auto;
     padding: 2.5rem;
@@ -73,11 +73,10 @@ h1, h2 {
     quality designs section styles
    ======================================================== */
 .section__title {
-    border: 2px solid red;
     font-family: 'Playfair Display', serif;
     font-size: 3.6rem;
     color: var(--beige);
-    padding-bottom: 1em;
+    padding-block: 1em;
 }
 
 /* modifier class */
@@ -87,8 +86,12 @@ h1, h2 {
 }
 
 .column {
-    margin-top: 1em;
+    margin-bottom: 1em;
     font-size: 2.1rem;
+}
+
+.column--no-margin {
+    margin: 0;
 }
 
 /* ========================================================
@@ -98,8 +101,15 @@ h1, h2 {
     background-color: var(--dark);
 }
 
-.section__text-white {
+.section__text {
     color: var(--white);
+}
+
+/* ========================================================
+    created with care section styles
+   ======================================================== */
+.created-with-care-section {
+    background-color: var(--brown);
 }
 
 /* ========================================================
