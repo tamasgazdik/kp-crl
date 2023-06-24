@@ -1,0 +1,61 @@
+/* =====================================================================
+   global styles and resets
+===================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    /* this forces us to use custom classes for different font-sizes and weights, and 
+    thus preventing us from running into the error of choosing <H1>, just because it's big */
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: var(--fs-18);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    --dark-grey: #2E323F;
+    --medium-grey: #3B4050;
+    --light-grey: #6F737F;
+    --white: ##FFFFFF;
+    --beige: #A59678;
+
+    --fs-16: 1.6rem;
+    --fs-18: 1.8rem;
+    --fs-21: 2.1rem;
+    --fs-24: 2.4rem;
+    --fs-30: 3.0rem;
+    --fs-36: 3.6rem;
+    --fs-90: 9.0rem;   
+}
+
+.conainer {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* =====================================================================
+   media queries
+===================================================================== */
+@media (min-width: 700px) {
+    
+}
+
+@media (min-width: 1000px) {
+    
+}
