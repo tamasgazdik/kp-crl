@@ -115,3 +115,24 @@ h1, h2 {
 /* ========================================================
     media queries
    ======================================================== */
+@media (min-width: 800px) {
+    .row {
+        display: flex;
+    }
+
+    .container {
+        padding-block: 10rem;
+    }
+
+    .section__title {
+        padding-top: 0;
+    }
+    
+    .column {
+        width: 100%;
+    }
+
+    .column + .column {
+        margin-left: 5rem;
+    }
+}
