@@ -2,7 +2,9 @@
    global styles and resets
 =================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -23,11 +25,19 @@ body {
     font-size: var(--fs-18);
 }
 
-section, main, aside, footer {
+section,
+main,
+aside,
+footer {
     padding-block: 2.5rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-wrap: balance;
 }
 
@@ -88,9 +98,9 @@ header {
     background: var(--beige);
     color: var(--dark-grey);
     transition: opacity 250ms ease;
-    
     position: absolute;
-    left: 0;
+    top: 15px;
+    left: 15px;
 }
 
 .nav-toggle:focus,
@@ -143,7 +153,7 @@ header {
     padding-bottom: 1em;
     display: flex;
     flex-direction: column;
-} 
+}
 
 .nav__list {
     list-style-type: none;
@@ -171,6 +181,22 @@ header {
 
 .logo {
     height: 30px;
+}
+
+.logo:hover,
+.logo:focus-visible,
+.nav__item:hover,
+.nav__item:focus-visible,
+.btn:hover,
+.btn:focus-visible,
+.footer__list__item:hover,
+.footer__list__item:focus-visible {
+    opacity: 0.85;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    cursor: pointer;
 }
 
 /* ===================================================
@@ -263,10 +289,14 @@ header {
 /* ===================================================
    footer styles 
 =================================================== */
+footer > .container > .row > .column {
+    padding-bottom: 0;
+}
+
 .footer__title {
     text-align: center;
     color: var(--white);
-    font-size: var(--fs-24);
+    font-size: var(--fs-36);
 }
 
 .column__title--fs-21 {
@@ -306,18 +336,23 @@ header {
         margin-inline: 1.25rem;
     }
 
-    .column > .column {
+    .column>.column {
         padding: 0;
         margin: 0;
     }
 
-    .row > .row {
+    .row>.row {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
     }
 }
 
 @media (min-width: 1000px) {
+
+    /* ===================================================
+   header styles 
+=================================================== */
     header {
         padding: 0;
     }
@@ -335,7 +370,6 @@ header {
         align-items: center;
     }
 
-
     .nav__list {
         display: flex;
         flex-direction: row;
@@ -347,9 +381,14 @@ header {
         align-items: center;
     }
 
+    /* ===================================================
+   hero section styles 
+=================================================== */
     .hero {
         padding-block: 10rem;
+        border: none;
     }
+
     .hero__title {
         padding: 0;
     }
@@ -361,5 +400,72 @@ header {
 
     .btn {
         margin: 0;
+    }
+
+    section,
+    main,
+    aside,
+    footer {
+        padding-block: 10rem;
+    }
+
+    /* ===================================================
+   main styles 
+=================================================== */
+    .main-container {
+        display: flex;
+    }
+
+    .main-content {
+        margin-right: 10rem;
+    }
+
+    .aside-content {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .column--dark-bg {
+        margin: 0 0 1em 0;
+    }
+
+    .img {
+        margin-block: 7.5rem;
+    }
+
+    .column__title {
+        margin-bottom: 1em;
+    }
+
+    /* ===================================================
+   footer styles 
+=================================================== */
+    .footer__title {
+        text-align: center;
+        color: var(--white);
+        font-size: var(--fs-36);
+        margin-bottom: 0.5em;
+    }
+
+    footer .column + .row {
+        width: 100%;
+        padding-inline: 0;
+        margin: 0 0 0 7.5rem;
+    }
+
+    .column > .column + .column {
+        margin-left: 1.5em;
+    }
+
+    .footer__list__item + .footer__list__item {
+        margin-top: 1em;
+    }
+
+    footer .column {
+        padding-top: 2.5rem;
+    }
+
+    footer .row {
+        align-items: flex-start;
     }
 }
