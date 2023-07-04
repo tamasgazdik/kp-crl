@@ -1,6 +1,6 @@
-/* =====================================================================
+/* ===================================================
    global styles and resets
-===================================================================== */
+=================================================== */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -21,8 +21,6 @@ html {
 
 body {
     font-size: var(--fs-18);
-    /* needed because hidden nav causes overflow */
-    overflow-x: hidden;
 }
 
 section, main, aside, footer {
@@ -65,9 +63,9 @@ img {
 }
 
 
-/* =====================================================================
+/* ===================================================
    header styles 
-===================================================================== */
+=================================================== */
 header {
     background: var(--dark-grey);
     padding: 2.5rem;
@@ -76,6 +74,8 @@ header {
 
 .nav {
     width: 100%;
+    /* needed because hidden nav causes overflow */
+    overflow-x: hidden;
 }
 
 .nav-toggle {
@@ -163,7 +163,7 @@ header {
 }
 
 .nav__link--button {
-    padding: 0.5em 1em;
+    padding: 0.25em 1em;
     color: var(--white);
     background-color: var(--beige);
     border-radius: 100vw;
@@ -173,9 +173,9 @@ header {
     height: 30px;
 }
 
-/* =====================================================================
+/* ===================================================
    hero section styles 
-===================================================================== */
+=================================================== */
 .section--bg-medium {
     background-color: var(--medium-grey);
 }
@@ -209,9 +209,9 @@ header {
     margin-bottom: 1.5em;
 }
 
-/* =====================================================================
+/* ===================================================
    traits-section styles 
-===================================================================== */
+=================================================== */
 .traits-section {
     background-color: var(--light-beige);
 }
@@ -236,9 +236,9 @@ header {
     margin-block: 1em;
 }
 
-/* =====================================================================
+/* ===================================================
    main styles 
-===================================================================== */
+=================================================== */
 .column--dark-bg {
     background-color: var(--dark-grey);
     margin-block: 1em;
@@ -260,9 +260,9 @@ header {
     color: var(--white);
 }
 
-/* =====================================================================
+/* ===================================================
    footer styles 
-===================================================================== */
+=================================================== */
 .footer__title {
     text-align: center;
     color: var(--white);
@@ -275,6 +275,7 @@ header {
 
 .column__text--fs-16 {
     font-size: var(--fs-16);
+    line-height: 1.5em;
 }
 
 .footer__list {
@@ -290,13 +291,75 @@ header {
     margin-block: 1em;
 }
 
-/* =====================================================================
+/* ===================================================
    media queries
-===================================================================== */
+=================================================== */
+/* for medium screens
+   or tablet portrait up */
 @media (min-width: 700px) {
-    
+    .aside-content {
+        display: flex;
+    }
+
+    .column {
+        padding: 2.5rem;
+        margin-inline: 1.25rem;
+    }
+
+    .column > .column {
+        padding: 0;
+        margin: 0;
+    }
+
+    .row > .row {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media (min-width: 1000px) {
-    
+    header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero {
+        padding-block: 10rem;
+    }
+    .hero__title {
+        padding: 0;
+    }
+
+    .hero__content {
+        align-self: flex-end;
+        padding-left: 3em;
+    }
+
+    .btn {
+        margin: 0;
+    }
 }
